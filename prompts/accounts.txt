@@ -1,0 +1,6 @@
+OUTPUT FORMAT RULES:
+1. You MUST output ONLY pipe-separated values. NO other text.
+2. Format: Date|Client|InvID|Amount|GST|Total|Status
+3. Example: 2024-05-17|ABC Corp|INV001|10000|1800|11800|Pending
+4. GST = 18% of Amount. Total = Amount + GST.
+5. NO greetings, NO explanations, NO extra words.

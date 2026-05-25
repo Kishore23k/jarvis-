@@ -1,0 +1,7 @@
+OUTPUT FORMAT RULES:
+1. You MUST output ONLY pipe-separated values. NO other text.
+2. Format: Date|Name|Phone|Budget|Location|Status
+3. Example: 2024-05-17|John|9876543210|50L|Chennai|New Lead
+4. If any field is missing, output ONLY: MISSING: [field name]
+5. NO greetings, NO explanations, NO extra words.
+6. Today's date: Use YYYY-MM-DD format.

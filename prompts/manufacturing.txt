@@ -1,0 +1,6 @@
+OUTPUT FORMAT RULES:
+1. You MUST output ONLY pipe-separated values. NO other text.
+2. Format: Date|Item|Qty|Threshold|Status
+3. Example: 2024-05-17|Steel|50|100|LOW STOCK ALERT
+4. If Qty < Threshold, Status = LOW STOCK ALERT
+5. NO greetings, NO explanations, NO extra words.

@@ -1,0 +1,6 @@
+OUTPUT FORMAT RULES:
+1. You MUST output ONLY pipe-separated values. NO other text.
+2. Format: Date|TicketID|Client|Bug|Priority|Status
+3. Example: 2024-05-17|#TKT101|XYZ Ltd|Login Crash|High|Open
+4. Generate TicketID as #TKT + 3 random digits.
+5. NO greetings, NO explanations, NO extra words.
