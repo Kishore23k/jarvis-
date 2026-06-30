@@ -1,0 +1,206 @@
+{
+  "clients": {
+    "CLT001": {
+      "name": "Demo Real Estate",
+      "owner": "Demo Owner",
+      "sector": "realestate",
+      "sheet_id": "1urX0FNiFXV4FQNnflIr5iScoOe55go2zjCtW3Z7ulrE",
+      "password": "DEMO2025",
+      "active": true,
+      "trial_end": "2026-12-31",
+      "plan": "trial",
+      "chat_id": null,
+      "language_pref": "tanglish",
+      "gst_number": "33ABCDE1234F1Z5",
+      "address": "Chennai, Tamil Nadu - 600001",
+      "data": {
+        "leads": [
+          {
+            "id": "LEA0609092606",
+            "timestamp": "2026-06-09T09:26:06.664145",
+            "name": "Ravi",
+            "phone": "98765 43210",
+            "type": "buy",
+            "budget": "50L",
+            "location": "Chennai",
+            "property_type": "flat"
+          },
+          {
+            "id": "LEA0609141954",
+            "timestamp": "2026-06-09T14:19:54.719700",
+            "name": "Ravi",
+            "phone": "98765 43210",
+            "type": "buy",
+            "budget": "50L",
+            "location": "Chennai",
+            "property_type": "flat"
+          },
+          {
+            "id": "LEA0609142053",
+            "timestamp": "2026-06-09T14:20:53.871431",
+            "name": "Raj",
+            "phone": "98765 43230",
+            "type": "buy",
+            "budget": "50L",
+            "location": "Chennai",
+            "property_type": "flat"
+          },
+          {
+            "id": "LEA0609142221",
+            "timestamp": "2026-06-09T14:22:21.629659",
+            "name": "Raj",
+            "phone": "98765 43230",
+            "type": "buy",
+            "budget": "50L",
+            "location": "Chennai",
+            "property_type": "flat"
+          },
+          {
+            "id": "LEA0609143731",
+            "timestamp": "2026-06-09T14:37:31.182506",
+            "name": "RAi",
+            "phone": "9877543210",
+            "type": "buy",
+            "budget": "50L",
+            "location": "Chennai",
+            "property_type": "flat"
+          },
+          {
+            "id": "LEA0611140329",
+            "timestamp": "2026-06-11T14:03:29.647037",
+            "name": "Rajesh",
+            "phone": "1234567890",
+            "type": "buy",
+            "budget": "50L",
+            "location": "Coimbatore",
+            "property_type": "not mentioned"
+          }
+        ],
+        "contacts": [],
+        "reminders": []
+      }
+    },
+    "CLT002": {
+      "name": "Demo Manufacturing",
+      "owner": "Demo Owner",
+      "sector": "manufacturing",
+      "sheet_id": "1urX0FNiFXV4FQNnflIr5iScoOe55go2zjCtW3Z7ulrE",
+      "password": "DEMO2025",
+      "active": true,
+      "trial_end": "2026-12-31",
+      "plan": "trial",
+      "chat_id": null,
+      "language_pref": "tanglish",
+      "gst_number": "33XYZ7890G1H2Z5",
+      "address": "Coimbatore, Tamil Nadu",
+      "data": {
+        "stock": [
+          {
+            "id": "STO0609143842",
+            "timestamp": "2026-06-09T14:38:42.752916",
+            "item_name": "Steel rods",
+            "quantity": 500,
+            "unit": "kg",
+            "category": "rod",
+            "min_qty": 100,
+            "price": null
+          },
+          {
+            "id": "STO0611140609",
+            "timestamp": "2026-06-11T14:06:09.800062",
+            "item_name": "steel",
+            "quantity": 500,
+            "unit": "kg",
+            "category": "rod",
+            "min_qty": 200
+          }
+        ],
+        "contacts": [],
+        "reminders": []
+      }
+    },
+    "CLT003": {
+      "name": "Demo Accounts",
+      "owner": "Demo Owner",
+      "sector": "accounts",
+      "sheet_id": "1urX0FNiFXV4FQNnflIr5iScoOe55go2zjCtW3Z7ulrE",
+      "password": "DEMO2025",
+      "active": true,
+      "trial_end": "2026-12-31",
+      "plan": "trial",
+      "chat_id": null,
+      "language_pref": "tanglish",
+      "gst_number": "33LMN4567J3K4L5",
+      "address": "Chennai, Tamil Nadu - 600001",
+      "data": {
+        "invoices": [
+          {
+            "id": "INV0609092511",
+            "timestamp": "2026-06-09T09:25:11.055931",
+            "invoice_no": "INV-01",
+            "client_name": "Senthil Stores",
+            "amount": 18000,
+            "status": "pending"
+          },
+          {
+            "id": "INV0609150441",
+            "timestamp": "2026-06-09T15:04:41.992461",
+            "invoice_no": "INV-001",
+            "client_name": "Raj Sellers",
+            "amount": 10000,
+            "gst_amount": 0,
+            "status": "pending",
+            "date": "2026-06-09"
+          },
+          {
+            "id": "INV0611140805",
+            "timestamp": "2026-06-11T14:08:05.323922",
+            "client_name": "Anil",
+            "amount": 15000,
+            "status": "pending"
+          }
+        ],
+        "contacts": [],
+        "reminders": []
+      }
+    },
+    "CLT004": {
+      "name": "Demo Software",
+      "owner": "Demo Owner",
+      "sector": "software",
+      "sheet_id": "1urX0FNiFXV4FQNnflIr5iScoOe55go2zjCtW3Z7ulrE",
+      "password": "DEMO2025",
+      "active": true,
+      "trial_end": "2026-12-31",
+      "plan": "trial",
+      "chat_id": "6660041773",
+      "language_pref": "tanglish",
+      "gst_number": "33STU8901M5N6O7",
+      "address": "Coimbatore, Tamil Nadu",
+      "data": {
+        "tickets": [
+          {
+            "id": "TIC0609150819",
+            "timestamp": "2026-06-09T15:08:19.505097",
+            "title": "Login crash",
+            "client_name": "ABC Corp",
+            "priority": "high",
+            "status": "open",
+            "description": "login crash"
+          },
+          {
+            "id": "TIC0611140924",
+            "timestamp": "2026-06-11T14:09:24.341621",
+            "title": "Login crash",
+            "client_name": "ABC Corp",
+            "priority": "high",
+            "status": "open",
+            "description": "login crash"
+          }
+        ],
+        "contacts": [],
+        "reminders": []
+      }
+    }
+  }
+}

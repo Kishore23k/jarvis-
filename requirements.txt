@@ -3,3 +3,14 @@ python-telegram-bot
 gspread
 google-auth
 python-dotenv
+
+
+
+python-telegram-bot==21.3
+groq==0.9.0
+streamlit==1.35.0
+pandas==2.2.2
+python-dotenv==1.0.1
+apscheduler==3.10.4
+gspread==6.1.2
+google-auth==2.29.0
