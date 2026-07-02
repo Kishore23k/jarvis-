@@ -1101,34 +1101,38 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # ══════════════════════════════════════════════════════════════
 # MAIN
-# ══════════════════════════════════════════════════════════════
 def main():
-    global _bot_app
-    
     token = os.getenv("TELEGRAM_BOT_TOKEN")
     if not token:
         print("❌ TELEGRAM_BOT_TOKEN not set!")
         return
-    
+
     print("🚀 Starting JARVIS...")
-    print("✅ Client isolation enabled")
-    print("✅ No data leakage between clients")
-    print("✅ Same powerful AI assistant\n")
-    
-    # Use Application instead of Updater (Newer version)
-    _bot_app = Application.builder().token(token).build()
-    
-    # Add handlers
-    _bot_app.add_handler(CommandHandler("start", cmd_start))
-    _bot_app.add_handler(CommandHandler("help", cmd_help))
-    _bot_app.add_handler(CommandHandler("summary", cmd_summary))
-    _bot_app.add_handler(CommandHandler("logout", cmd_logout))
-    _bot_app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
-    
+    print(f"✅ Token found: {token[:10]}...")
+
+    # Delete webhook
+    import requests
+    try:
+        url = f"https://api.telegram.org/bot{token}/deleteWebhook"
+        response = requests.get(url)
+        print(f"🔗 Webhook deleted: {response.json()}")
+    except Exception as e:
+        print(f"❌ Webhook delete error: {e}")
+
+    # Build application
+    app = Application.builder().token(token).build()
+    print("✅ Application built")
+
+    # Add ALL handlers
+    app.add_handler(CommandHandler("start", cmd_start))
+    app.add_handler(CommandHandler("help", cmd_help))
+    app.add_handler(CommandHandler("summary", cmd_summary))
+    app.add_handler(CommandHandler("logout", cmd_logout))
+    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+    print("✅ Handlers added")
+
     print("✅ BOT IS LIVE! 🎉")
-    print("🔒 Each client has their own private data space")
-    print("📱 Login: CLT001 DEMO2025\n")
-    
-    _bot_app.run_polling(drop_pending_updates=True)
-if __name__ == '__main__':
-    main()
+    print("📱 Bot is polling for messages...")
+
+    # THIS IS WHAT MAKES IT WORK - Start polling!
+    app.run_polling(drop_pending_updates=True)
