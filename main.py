@@ -967,6 +967,14 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # MAIN MESSAGE HANDLER
 # ══════════════════════════════════════════════════════════════
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    # === DEBUG: Print every message ===
+    print(f"🔔🔔🔔 MESSAGE RECEIVED! 🔔🔔🔔")
+    print(f"From: {update.message.from_user.username}")
+    print(f"Text: {update.message.text}")
+    print(f"Chat ID: {update.message.chat_id}")
+    # ==================================
+    
+    # ... rest of your existing code ...
     chat_id = str(update.message.chat_id)
     text    = update.message.text.strip()
 
