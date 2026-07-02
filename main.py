@@ -901,7 +901,7 @@ async def cmd_setlang(update: Update, context: ContextTypes.DEFAULT_TYPE):
     labels = {"tamil":"Pure Tamil 🇮🇳","english":"English 🇬🇧","tanglish":"Tanglish 😎"}
     await update.message.reply_text(f"✅ Language → *{labels[lang]}*", parse_mode='Markdown')
 
-    async def cmd_logout(update: Update, context: ContextTypes.DEFAULT_TYPE):
+async def cmd_logout(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Logout command - unlink chat from client"""
     chat_id = str(update.message.chat_id)
     
