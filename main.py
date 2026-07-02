@@ -901,6 +901,33 @@ async def cmd_setlang(update: Update, context: ContextTypes.DEFAULT_TYPE):
     labels = {"tamil":"Pure Tamil 🇮🇳","english":"English 🇬🇧","tanglish":"Tanglish 😎"}
     await update.message.reply_text(f"✅ Language → *{labels[lang]}*", parse_mode='Markdown')
 
+    async def cmd_logout(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    """Logout command - unlink chat from client"""
+    chat_id = str(update.message.chat_id)
+    
+    # Get client name before logout
+    client_id, client = get_client_by_chat(chat_id)
+    if not client:
+        await update.message.reply_text("❌ Not logged in!", parse_mode='Markdown')
+        return
+    
+    client_name = client.get('name', 'Sir')
+    
+    # Unlink the chat
+    clients = get_clients()
+    for cid, info in clients.items():
+        if str(info.get('chat_id', '')) == str(chat_id):
+            clients[cid]['chat_id'] = None
+            break
+    save_clients(clients)
+    
+    await update.message.reply_text(
+        f"👋 *Goodbye {client_name}!*\n\n"
+        f"🔒 Your data is safe.\n\n"
+        f"Login again: `LINK {client_id}`",
+        parse_mode='Markdown'
+    )
+
 
 # ══════════════════════════════════════════════════════════════
 # CALLBACKS
