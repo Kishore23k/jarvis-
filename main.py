@@ -8,6 +8,17 @@ Hardened for 20-client pilot testing.
 - Daily 8am auto-alerts per sector
 - Handles any Tamil/Tanglish/broken text
 - Never crashes, always responds
+
+import os
+import json
+import re
+from datetime import datetime
+from telegram import Update
+from telegram.ext import (
+    Application, MessageHandler, CommandHandler,
+    filters, ContextTypes
+)
+from dotenv import load_dotenv
 """
 # main.py - Add these lines at the top
 import os
@@ -1058,42 +1069,31 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 # ══════════════════════════════════════════════════════════════
 def main():
     global _bot_app
-
+    
     token = os.getenv("TELEGRAM_BOT_TOKEN")
     if not token:
-        print("❌ TELEGRAM_BOT_TOKEN not set in .env!")
+        print("❌ TELEGRAM_BOT_TOKEN not set!")
         return
-
-    async def post_init(app):
-        scheduler.start()
-        restore_reminders()
-        schedule_daily_jobs()
-        print("🚀 JARVIS IS LIVE!")
-        print(f"📂 Data: {DATA_FILE}")
-        print("🏠 Real Estate | 🏭 Manufacturing | 💰 Accounts | 💻 Software")
-
-    async def post_shutdown(app):
-        if scheduler.running:
-            scheduler.shutdown(wait=False)
-
-    _bot_app = (
-        Application.builder()
-        .token(token)
-        .post_init(post_init)
-        .post_shutdown(post_shutdown)
-        .build()
-    )
-
-    _bot_app.add_handler(CommandHandler("start",     cmd_start))
-    _bot_app.add_handler(CommandHandler("help",      cmd_help))
-    _bot_app.add_handler(CommandHandler("summary",   cmd_summary))
-    _bot_app.add_handler(CommandHandler("reminders", cmd_reminders))
-    _bot_app.add_handler(CommandHandler("setlang",   cmd_setlang))
-    _bot_app.add_handler(CommandHandler("syncsheet", cmd_syncsheet))
-    _bot_app.add_handler(CallbackQueryHandler(handle_callback))
+    
+    print("🚀 Starting JARVIS...")
+    print("✅ Client isolation enabled")
+    print("✅ No data leakage between clients")
+    print("✅ Same powerful AI assistant\n")
+    
+    # Use Application instead of Updater (Newer version)
+    _bot_app = Application.builder().token(token).build()
+    
+    # Add handlers
+    _bot_app.add_handler(CommandHandler("start", cmd_start))
+    _bot_app.add_handler(CommandHandler("help", cmd_help))
+    _bot_app.add_handler(CommandHandler("summary", cmd_summary))
+    _bot_app.add_handler(CommandHandler("logout", cmd_logout))
     _bot_app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
-
+    
+    print("✅ BOT IS LIVE! 🎉")
+    print("🔒 Each client has their own private data space")
+    print("📱 Login: CLT001 DEMO2025\n")
+    
     _bot_app.run_polling(drop_pending_updates=True)
-
 if __name__ == '__main__':
     main()
