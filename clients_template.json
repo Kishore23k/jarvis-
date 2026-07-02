@@ -1,0 +1,23 @@
+{
+  "clients": {
+    "CLT001": {
+      "name": "Your Business Name",
+      "owner": "Your Name",
+      "sector": "realestate",
+      "sheet_id": "",
+      "password": "CHANGE_ME",
+      "active": true,
+      "trial_end": "2026-12-31",
+      "plan": "trial",
+      "chat_id": null,
+      "language_pref": "tanglish",
+      "data": {
+        "leads": [],
+        "invoices": [],
+        "tickets": [],
+        "stock": [],
+        "reminders": []
+      }
+    }
+  }
+}
